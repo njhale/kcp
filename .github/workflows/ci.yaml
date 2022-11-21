@@ -66,7 +66,7 @@ jobs:
           kill $(cat /tmp/kcp.pid) || true
           wait $(cat /tmp/kcp.pid) || true
 
-      - uses: cytopia/upload-artifact-retry-action@v0.1.2
+      - uses: cytopia/upload-artifact-retry-action@v0.1.7
         if: ${{ always() }}
         with:
           name: e2e-shared-server
